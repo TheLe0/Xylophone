@@ -3,6 +3,8 @@ package br.com.leotosin.xylophone
 import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.Button
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -11,10 +13,33 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private fun playSound()
+    fun clickLamina(view : View)
     {
-        val sound :MediaPlayer = MediaPlayer.create(this, R.raw.note1)
+        val button : Button = view as Button
+
+        this.playSound(this.findSound(button.tag.toString().toInt()))
+    }
+
+    private fun playSound(note :Int)
+    {
+
+        val sound :MediaPlayer = MediaPlayer.create(this, note)
 
         sound.start()
+    }
+
+    private fun findSound(note :Int) :Int
+    {
+        return when (note)
+        {
+            1 -> R.raw.note1
+            2 -> R.raw.note2
+            3 -> R.raw.note3
+            4 -> R.raw.note4
+            5 -> R.raw.note5
+            6 -> R.raw.note6
+            7 -> R.raw.note7
+            else -> 0
+        }
     }
 }
