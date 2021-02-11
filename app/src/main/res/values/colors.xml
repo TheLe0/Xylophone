@@ -9,4 +9,11 @@
     <color name="white">#FFFFFFFF</color>
     <color name="background">#E36B95</color>
     <color name="background_contrast">#E44E82</color>
+    <color name="note_1">#e74c3c</color>
+    <color name="note_2">#e67e22</color>
+    <color name="note_3">#f1c40f</color>
+    <color name="note_4">#1abc9c</color>
+    <color name="note_5">#2ecc71</color>
+    <color name="note_6">#3498db</color>
+    <color name="note_7">#9b59b6</color>
 </resources>

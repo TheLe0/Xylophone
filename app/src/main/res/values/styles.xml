@@ -9,4 +9,10 @@
         <item name="android:navigationBarColor">@color/background_contrast</item>
     </style>
 
+    <style name="KeyStyle">
+        <item name="android:layout_weight">@dimen/KeyStyle_weight</item>
+        <item name="android:layout_marginTop">@dimen/KeyStyle_marginTop</item>
+        <item name="android:layout_marginBottom">@dimen/KeyStyle_marginBottom</item>
+    </style>
+
 </resources>
