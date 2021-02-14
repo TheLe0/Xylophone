@@ -22,10 +22,14 @@ class MainActivity : AppCompatActivity() {
 
     private fun playSound(note :Int)
     {
-
         val sound :MediaPlayer = MediaPlayer.create(this, note)
 
+        sound.setOnCompletionListener {
+            it.release()
+        }
+
         sound.start()
+
     }
 
     private fun findSound(note :Int) :Int
